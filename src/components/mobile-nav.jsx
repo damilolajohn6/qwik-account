@@ -24,7 +24,7 @@ const MobileNav = () => {
       {/* Mobile Menu Trigger */}
       <SheetTrigger asChild>
         <Button
-          className="bg-[#78706F] hover:bg-[#3f3b3a] p-2 rounded-md"
+          className="bg-[#D4A5A5] hover:bg-[#3f3b3a] p-2 rounded-md"
           onClick={() => setOpen(true)}
         >
           <CiMenuFries className="text-[36px] text-white" />
@@ -46,13 +46,18 @@ const MobileNav = () => {
               className={`capitalize font-bold transition-all  ${
                 link.href === pathname
                   ? " border-b-2 pb-1 border-[#DBA56D]"
-                  : "hover:text-[#DBA56D]"
+                  : "hover:text-[#D4A5A5]"
               }`}
             >
               {link.label}
             </Link>
           ))}
         </nav>
+        <div className=" items-center space-x-2 text-gray-700">
+          <Link onClick={() => setOpen(false)} href="/contact">
+            <Button className="bg-[#D4A5A5]">Book a Consultation </Button>
+          </Link>
+        </div>
       </SheetContent>
     </Sheet>
   );
