@@ -119,4 +119,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  container {
+    @apply py-10 px-6 mx-auto;
+  }
 }
